@@ -1,1 +1,19 @@
-A gae/python project for demonstrating the `application_readable` configuration option.
+A gae/python project for demonstrating the `application_readable`
+configuration option.
+
+Clone with:
+    https://github.com/ezralalonde/psychic-bear.git
+
+Run using:
+    dev_appserver.py .
+
+Visiting /static/hi.txt should always work, displaying:
+    <content of static/hi.txt>
+
+Visiting / should work if `application readable` is enabled, displaying:
+    Hello, webapp World!
+    <content of static/hi.txt>
+Visiting / should not work if `application_readable` is missing or false:
+    500 Internal Server Error
+    The server has either erred or is incapable
+    of performing the requested operation.
